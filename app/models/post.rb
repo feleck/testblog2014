@@ -7,11 +7,12 @@ class Post
   field :title, type: String
   field :archived, type: Boolean, default: false
 
-  validates_presence_of :body, :title
+  validates :body, presence: true
+  validates :title, presence: true
 
   belongs_to :user
   has_many :comments, dependent: :destroy
-  
+
   default_scope ->{ ne(archived: true) }
 
   def archive!
