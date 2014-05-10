@@ -1,0 +1,15 @@
+%h2
+  = post.title
+  %small
+    = post.friendly_date
+%h6
+  = 'Hotness: ' + post.hotness.to_s
+-if current_user.owner? post
+  = link_to "edit", edit_post_path(post), class: 'btn btn-info'
+  = link_to "archive", mark_archived_post_path(post), method: :post, data: {confirm: 'Are you sure?' }, class: 'btn btn-warning'
+  = link_to "delete", post_path(post), method: :delete, data: { confirm: 'Are you sure?'}, class: 'btn btn-danger'
+.post__body
+  = post.body
+.post__tags-list.tagsinput
+  - post.tags_array.each do |tag|
+    = content_tag :span, tag, class: 'tag'
