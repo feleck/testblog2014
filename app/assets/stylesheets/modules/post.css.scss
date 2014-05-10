@@ -29,4 +29,39 @@
   .post__body {
     margin: 15px 0;
   }
+  margin-bottom: 80px;
+}
+
+.comment--full-size {
+  .comment__body {
+    margin: 15px ;
+  }
+}
+
+.unhide {
+  margin-left: 20px;
+}
+
+.abusive{
+  color: red;
+}
+
+.vote_up {
+  color: green;
+  text-decoration: none;
+  margin-left: 30px;  
+}
+
+.comment__body {
+  margin-bottom: 10px;
+}
+
+.vote_down {
+  color: red;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+a:hover.vote_down {
+  color: #f88;
 }
