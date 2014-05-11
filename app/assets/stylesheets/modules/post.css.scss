@@ -52,9 +52,6 @@
   margin-left: 30px;  
 }
 
-.comment__body {
-  margin-bottom: 10px;
-}
 
 .vote_down {
   color: red;
@@ -64,4 +61,9 @@
 
 a:hover.vote_down {
   color: #f88;
+}
+
+.comment {
+  margin-bottom: 15px;
+
 }

@@ -1,0 +1,11 @@
+= div_for comment do
+  = comment.body
+  %br
+  = 'by: ' + comment.user.name
+  - if comment.abusive && current_user.owner?(post)
+    .abusive
+      = 'Comment marked as abusive!'
+      = link_to "unhide", mark_as_not_abusive_post_comment_path(post, comment), class: 'unhide btn btn-inverse'
+  %br
+  = link_to "+ vote UP", vote_up_post_comment_path(post, comment), class: 'vote_up'
+  = link_to "+ vote DOWN", vote_down_post_comment_path(post, comment), class: 'vote_down'

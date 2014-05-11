@@ -3,7 +3,10 @@
   = render 'post'
 
 .comment--full-size
-
+  %h2 comments
   = render 'comments/form'
+  #comments
+    - comments.each do |comment|
+      = render 'comments/comment' , comment: comment
 
-  = render 'comments/comments'
+  
